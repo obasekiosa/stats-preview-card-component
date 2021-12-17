@@ -5,7 +5,10 @@
   "main": "stats-preview-card-component.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "jsx-build": "npx babel --watch src --out-dir . --presets react-app/prod"
+    "jsx-build": "npx babel --watch src/js --out-dir build/js --presets react-app/prod",
+    "sass-build": "sass --watch src/css:build/css",
+    "build": "sass src/css:build/css && npx babel src/js --out-dir build/js --presets react-app/prod",
+    "clean": "rmdir /s /q build"
   },
   "repository": {
     "type": "git",
@@ -20,6 +23,7 @@
   "homepage": "https://github.com/obasekiosa/stats-preview-card-component#readme",
   "dependencies": {
     "babel-cli": "^6.26.0",
-    "babel-preset-react-app": "^3.1.2"
+    "babel-preset-react-app": "^3.1.2",
+    "sass": "^1.45.0"
   }
 }

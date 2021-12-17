@@ -2,7 +2,7 @@
 
 const e = React.createElement;
 
-class StatsPreviewCardComponent extends React.Component {
+class StatsPreviewCard extends React.Component {
     constructor(props) {
         super(props);
         this.state = { liked: false };
@@ -22,4 +22,4 @@ class StatsPreviewCardComponent extends React.Component {
 }
 
 const domContainer = document.querySelector('#root');
-ReactDOM.render(e(StatsPreviewCardComponent), domContainer);
+ReactDOM.render(e(StatsPreviewCard), domContainer);

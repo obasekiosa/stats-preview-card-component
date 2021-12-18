@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+// Screen sizes
+
+$mobile-size: 375px;
+$desktop-size: 1440px;
+
+// Screen break points
+// $mobile-point: 576px;
+$mobile-point: 768px;
+
+
+// Colors
+
+/// Primary
+
+$main-background: hsl(233, 47%, 7%);
+$card-background: hsl(244, 38%, 16%);
+$accent: hsl(277, 64%, 61%);
+
+/// Neutral
+
+$white: hsl(0, 0%, 100%);
+$main-paragraph: hsla(0, 0%, 100%, 0.75);
+$stats-heading: hsla(0, 0%, 100%, 0.6);
+
+// Font sizes
+$font-size: 15px;
+
+// Fonts
+$font-inter: 'Inter', sans-serif;
+$font-lexend: 'Lexend Deca', sans-serif;
+
+// Font weights
+$light: 400;
+$heavy: 700;
+
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+body {
+    background-color: $main-background;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    font-size: $font-size;
+    font-family: $font-inter;
+    padding: 24px;
+    color: $stats-heading;
+}
+
+.StatsCard {
+    text-align: start;
+
+    .value {
+        font-family: $font-inter;
+        color: $white;
+        // margin-bottom: 1px;
+        font-weight: $heavy;
+        font-size: 1.2rem;
+    }
+
+    .heading {
+        font-family: $font-lexend;
+        color: $stats-heading;
+        font-weight: $light;
+        font-size: 0.65rem;
+    }
+
+    @media screen and (max-width: $mobile-point) {
+        
+        & {
+            text-align: center;
+        }
+    }
+}
+
+.StatsGroup {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: auto;
+
+    @media screen and (max-width: $mobile-point) {
+        
+        & {
+            grid-template-rows: repeat(3, 1fr);
+            grid-template-columns: auto;
+            text-align: center;
+            row-gap: 20px;
+        }
+    }
+}
+
+.InfoCard {
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    row-gap: 48px;
+    padding: 64px;
+    height: 100%;
+    width: 100%;
+
+    background-color: $card-background;
+
+    h1 {
+        color: $white;
+        font-weight: $heavy;
+        font-size: 2rem;
+
+        span {
+            color: $accent;
+        }
+    }
+
+    p {
+        color: $stats-heading;
+        line-height: 1.7;
+    }
+
+    @media screen and (max-width: $mobile-point) {
+
+        & {
+            padding: 40px;
+            text-align: center;
+            h1 {
+                font-size: 1.8rem;
+            }
+        }
+        
+        
+    }
+}
+
+
+.ImageHeader {
+    position: relative;
+    height: 100%;
+    width: 100%;
+
+    &::after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: "";
+        width: 100%;
+        height: 100%;
+        background-color: $main-background;
+        opacity: 0;
+    }
+
+    img {
+        content: url("../../images/image-header-desktop.jpg");
+        height: 100%;
+        display: inline-block;
+    }
+
+    @media screen and (max-width: $mobile-point) {
+        & {
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+
+.StatsPreviewCard {
+    
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 540px));
+    grid-template-rows: 1fr;
+    overflow: hidden;
+    border-radius: 10px;
+
+    .first {
+        width: 100%;
+        height: 100%;
+        grid-column: 1 / 2;
+        grid-row: 1;
+        
+    }
+
+    .second {
+        width: 100%;
+        height: 100%;
+        grid-column: 2 / 3;
+        grid-row: 1;
+    }
+
+    @media screen and (max-width: $mobile-point) {
+        & {
+            grid-template-rows: 250px minmax(250px, 1fr);
+            grid-template-columns: 350px;
+            text-align: center;
+
+            .first {
+                grid-row: 2 / 3;
+                grid-column: 1;;
+            }
+
+            .second {
+                grid-row: 1 / 2;
+                grid-column: 1;
+            }
+        }
+    }
+
+    
+}
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }

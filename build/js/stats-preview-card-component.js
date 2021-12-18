@@ -33,22 +33,30 @@ var InfoCard = function InfoCard() {
         "div",
         { className: "InfoCard" },
         React.createElement(
-            "h1",
+            "div",
             null,
-            "Get ",
             React.createElement(
-                "span",
+                "h1",
                 null,
-                "insights"
+                "Get ",
+                React.createElement(
+                    "span",
+                    null,
+                    "insights"
+                ),
+                " that help your business grow."
             ),
-            " that help your business grow."
+            React.createElement(
+                "p",
+                null,
+                "Discover the benefits of data analytics and make better decisions regarding revenue, customer experience, and overall efficiency."
+            )
         ),
         React.createElement(
-            "p",
-            null,
-            "Discover the benefits of data analytics and make better decisions regarding revenue, customer experience, and overall efficiency."
-        ),
-        React.createElement(StatsGroup, null)
+            "div",
+            { className: "stats" },
+            React.createElement(StatsGroup, null)
+        )
     );
 };
 

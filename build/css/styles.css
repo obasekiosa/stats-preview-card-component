@@ -54,8 +54,9 @@ body {
 
 .InfoCard {
   display: grid;
-  grid-template-rows: repeat(3, auto);
-  row-gap: 48px;
+  grid-template-rows: repeat(2, auto);
+  grid-template-columns: auto;
+  align-content: space-between;
   padding: 64px;
   height: 100%;
   width: 100%;
@@ -65,6 +66,7 @@ body {
   color: white;
   font-weight: 700;
   font-size: 2rem;
+  margin-bottom: 24px;
 }
 .InfoCard h1 span {
   color: #aa5cdb;
@@ -72,6 +74,10 @@ body {
 .InfoCard p {
   color: rgba(255, 255, 255, 0.6);
   line-height: 1.7;
+  width: 90%;
+}
+.InfoCard .stats {
+  margin-top: 32px;
 }
 @media screen and (max-width: 768px) {
   .InfoCard {
@@ -80,6 +86,9 @@ body {
   }
   .InfoCard h1 {
     font-size: 1.8rem;
+  }
+  .InfoCard p {
+    width: 100%;
   }
 }
 
@@ -95,8 +104,8 @@ body {
   content: "";
   width: 100%;
   height: 100%;
-  background-color: #090b1a;
-  opacity: 0;
+  background-color: #3d0552;
+  opacity: 0.7;
 }
 .ImageHeader img {
   content: url("../../images/image-header-desktop.jpg");

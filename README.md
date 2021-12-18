@@ -88,7 +88,7 @@ Use this section to outline areas that you want to continue focusing on in futur
 ## Author
 
 - Website - [https://obasekiosa.github.io](https://obasekiosa.github.io)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/obasekiosa)
+- Frontend Mentor - [@obasekiosa](https://www.frontendmentor.io/profile/obasekiosa)
 - Twitter - [@obasekiosa](https://www.twitter.com/obasekiosa)
 
 ## Acknowledgments

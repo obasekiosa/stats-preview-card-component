@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #090b1a;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  min-height: 100vh;
+  font-size: 15px;
+  font-family: "Inter", sans-serif;
+  padding: 24px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.StatsCard {
+  text-align: start;
+}
+.StatsCard .value {
+  font-family: "Inter", sans-serif;
+  color: white;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+.StatsCard .heading {
+  font-family: "Lexend Deca", sans-serif;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 400;
+  font-size: 0.65rem;
+}
+@media screen and (max-width: 768px) {
+  .StatsCard {
+    text-align: center;
+  }
+}
+
+.StatsGroup {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-rows: auto;
+}
+@media screen and (max-width: 768px) {
+  .StatsGroup {
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: auto;
+    text-align: center;
+    row-gap: 20px;
+  }
+}
+
+.InfoCard {
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  row-gap: 48px;
+  padding: 64px;
+  height: 100%;
+  width: 100%;
+  background-color: #1b1938;
+}
+.InfoCard h1 {
+  color: white;
+  font-weight: 700;
+  font-size: 2rem;
+}
+.InfoCard h1 span {
+  color: #aa5cdb;
+}
+.InfoCard p {
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.7;
+}
+@media screen and (max-width: 768px) {
+  .InfoCard {
+    padding: 40px;
+    text-align: center;
+  }
+  .InfoCard h1 {
+    font-size: 1.8rem;
+  }
+}
+
+.ImageHeader {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+.ImageHeader::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: #090b1a;
+  opacity: 0;
+}
+.ImageHeader img {
+  content: url("../../images/image-header-desktop.jpg");
+  height: 100%;
+  display: inline-block;
+}
+@media screen and (max-width: 768px) {
+  .ImageHeader img {
+    width: 100%;
+  }
+}
+
+.StatsPreviewCard {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 540px));
+  grid-template-rows: 1fr;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.StatsPreviewCard .first {
+  width: 100%;
+  height: 100%;
+  grid-column: 1/2;
+  grid-row: 1;
+}
+.StatsPreviewCard .second {
+  width: 100%;
+  height: 100%;
+  grid-column: 2/3;
+  grid-row: 1;
+}
+@media screen and (max-width: 768px) {
+  .StatsPreviewCard {
+    grid-template-rows: 250px minmax(250px, 1fr);
+    grid-template-columns: 350px;
+    text-align: center;
+  }
+  .StatsPreviewCard .first {
+    grid-row: 2/3;
+    grid-column: 1;
+  }
+  .StatsPreviewCard .second {
+    grid-row: 1/2;
+    grid-column: 1;
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+
+/*# sourceMappingURL=styles.css.map */

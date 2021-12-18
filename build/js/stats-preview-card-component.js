@@ -90,7 +90,3 @@ var StatsPreviewCard = function StatsPreviewCard() {
 var e = React.createElement;
 var domContainer = document.querySelector('#root');
 ReactDOM.render(e(StatsPreviewCard), domContainer);
-
-//   10k + companies
-// 314 templates
-// 12m + queries
